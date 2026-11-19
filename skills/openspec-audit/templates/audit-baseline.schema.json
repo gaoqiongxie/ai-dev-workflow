@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "requirement": {
+    "id": "story-00000",
+    "name": "需求名称",
+    "project": "backend-a|backend-b|frontend"
+  },
+  "audit": {
+    "mode": "full|diff",
+    "auditedAt": "YYYY-MM-DDTHH:mm:ss+08:00",
+    "previousBaseline": "",
+    "conclusion": "审核未完成|不准入|有条件准入|准入"
+  },
+  "files": [
+    {
+      "path": "relative/or/absolute/path",
+      "sha256": "",
+      "role": "prd|ui|proposal|design|spec|api|ddl|frontend|tasks|acceptance"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "材料与范围",
+      "status": "checked|not_applicable|blocked",
+      "note": ""
+    }
+  ],
+  "findings": [
+    {
+      "id": "AUD-P0-001",
+      "fingerprint": "业务对象|业务动作|根因|受影响契约",
+      "severity": "P0|P1|P2",
+      "status": "open|resolved|accepted|cannot_verify",
+      "origin": "baseline|revision_introduced|scope_added|previously_missed",
+      "title": "",
+      "evidence": [
+        {
+          "file": "",
+          "section": "",
+          "fact": ""
+        }
+      ],
+      "impact": "",
+      "recommendation": "",
+      "verification": ""
+    }
+  ],
+  "uncovered": [],
+  "remainingRisks": []
+}
