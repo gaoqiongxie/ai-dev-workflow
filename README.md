@@ -39,6 +39,34 @@ Spec-Driven Development：用结构化文档驱动开发，AI 每个阶段有明
 | `memory-lookup` | 跨项目记忆检索（约束 AI 先查后写） | 「查一下之前怎么做的」 |
 | `shared-memory-bank` | 共享记忆库协作宪章与读写规范 | 「记忆库怎么协作」 |
 
+## 最快接入：让 AI 帮你装上这套工作流
+
+把下面这段 prompt **原样**发给你项目里的 AI 编码助手（Claude Code / Trae / Kimi / Cursor 均可），它会把本仓库的 skill 集装配进你的项目：
+
+```text
+我要给当前项目接入一套 AI 协作开发工作流 skill 集，仓库地址：
+https://github.com/gaoqiongxie/ai-dev-workflow
+
+请先通读该仓库的 README.md，然后帮我完成接入：
+
+1. git clone（或下载）该仓库到临时目录，把 skills/ 下 12 个 skill 目录复制到我当前
+   项目的 skill 目录（Claude Code 用 .claude/skills/，Trae 用 .trae/skills/，
+   按我实际用的工具选择，不确定先问我）
+2. 全局搜索 skill 文件里的占位概念并替换成我们团队的真实工具（先列出替换计划给我看，
+   确认后再改）：
+   - 「需求追踪系统」→ 我们实际用的 Jira / Zentao / 飞书项目及编号格式
+   - 「企业 IM 机器人」→ 我们的通知渠道（没有就删除相关段落）
+3. 项目根目录没有规则入口的话，顺手建一个（CLAUDE.md / AGENTS.md），写明：
+   新需求必须走 openspec-sdd 流程，禁止跳过提案直接开发
+4. 跑一次 openspec-init-baseline 初始化 OpenSpec 目录与审计基线
+5. 验证：让我说一句「走 SDD 流程开发 xx 需求」，确认 AI 能正确路由到 openspec-propose
+
+【红线】
+- 替换占位概念时只改 skill 文档与模板，不要动我项目里已有的业务代码
+- skill 里的阶段编号/检查单结构保持原样，不要"顺手优化"重组
+- 接入完成后给我一份变更清单（改了哪些文件、替换了哪些占位词）
+```
+
 ## 快速接入
 
 1. 把 `skills/` 下需要的目录复制（或软链）到你的工具 skill 目录：
